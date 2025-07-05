@@ -31,7 +31,25 @@ public class Main extends Application {
 		ClienteDAO clienteDAO =new ClienteDAO();
 		ArrayList<Cliente> clientes = new ArrayList<>();
 		
-		clientes = clienteDAO.read();
+		cliente.setNomeCliente("CABRAL");
+		cliente.setCpfCliente("85295175236");
+		cliente.setDataNasc("2005-01-30");
+		cliente.setTelefone("63992000000");
+		cliente.setEmail("cabral@gmail.com");
+		cliente.setEndereco("Rua Portugal");
+		
+		//clienteDAO.update(cliente);
+		//clienteDAO.delete("85295175236");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		clientes = clienteDAO.search("mariana");
 		
 		for(int i = 0; i < clientes.size(); i++) {		
 		cliente = clientes.get(i);
@@ -52,6 +70,7 @@ public class Main extends Application {
 		System.out.print("");
 		
 		}
+		
 		launch(args);
 	}
 }
